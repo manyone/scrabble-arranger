@@ -1,49 +1,69 @@
 .scrabble-tiles {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-top: 20px;
+  background-image: url('/felt_background.jpg');
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  min-height: 100vh;
+  padding: 20px;
+  box-sizing: border-box;
 }
 
 .tile-row {
   display: flex;
-}
-
-.tile-container {
-  width: 50px;
-  height: 50px;
-  margin: 2px;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .tile {
-  width: 100%;
-  height: 100%;
-  background-color: rgba(210, 180, 140, 0.8); /* Semi-transparent wooden color */
-  border: 2px solid #8b4513; /* Darker border */
+  width: 40px;
+  height: 40px;
+  margin: 2px;
+  background-color: rgba(210, 180, 140, 0.8);
+  border: 2px solid #8b4513;
   display: flex;
   justify-content: center;
   align-items: center;
   position: relative;
   border-radius: 5px;
-  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* Shadow for depth */
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
 }
 
 .tile-letter {
-  font-size: 24px;
+  font-size: 18px;
   font-weight: bold;
   color: #000;
 }
 
 .tile-points {
   position: absolute;
-  bottom: 5px;
-  right: 5px;
-  font-size: 12px;
+  bottom: 2px;
+  right: 2px;
+  font-size: 10px;
   color: #000;
 }
 
-.empty-cell {
+.results {
+  padding: 10px;
+  overflow-x: auto;
   width: 100%;
-  height: 100%;
-  /* No background or border for empty cells */
+  box-sizing: border-box;
+}
+
+@media (max-width: 600px) {
+  .tile {
+    width: 30px;
+    height: 30px;
+  }
+
+  .tile-letter {
+    font-size: 14px;
+  }
+
+  .tile-points {
+    font-size: 8px;
+  }
+
+  .scrabble-tiles {
+    padding: 10px;
+  }
 }
