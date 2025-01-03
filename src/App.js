@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import Arranger from './Arranger';
-import ScrabbleBoard from './ScrabbleBoard';
 import ScrabbleTiles from './ScrabbleTiles';
 import './App.css';
 

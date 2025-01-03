@@ -1,6 +1,3 @@
-import React, { useState } from 'react';
-
-const BOARD_SIZE = 15;
 
 const ScrabbleBoard = ({ board }) => {
   return (
