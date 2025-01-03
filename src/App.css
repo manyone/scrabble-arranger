@@ -1,0 +1,96 @@
+.adjusted-board pre {
+  font-family: monospace;
+  font-size: 16px;
+  line-height: 1.2;
+  background-color: #f0f0f0;
+  padding: 10px;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+
+.adjusted-board span {
+  display: inline-block;
+  width: 20px;
+  text-align: center;
+}
+
+.App {
+  text-align: center;
+  padding: 20px;
+}
+
+input {
+  padding: 10px;
+  margin-right: 10px;
+  width: 300px;
+}
+
+pre {
+  background-color: #f4f4f4;
+  padding: 10px;
+  border-radius: 5px;
+  text-align: left;
+  display: inline-block;
+}
+
+.results {
+  margin-top: 20px;
+}
+
+.results label {
+  display: block;
+  margin: 5px 0;
+}
+
+button {
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+.scrabble-tiles {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.tile-row {
+  display: flex;
+}
+
+.tile {
+  width: 50px;
+  height: 50px;
+  background-color: #d2b48c; /* Wooden color */
+  border: 2px solid #8b4513; /* Darker border */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 2px;
+  position: relative;
+  border-radius: 5px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* Shadow for depth */
+}
+
+.tile-letter {
+  font-size: 24px;
+  font-weight: bold;
+  color: #000;
+}
+
+.tile-points {
+  position: absolute;
+  bottom: 5px;
+  right: 5px;
+  font-size: 12px;
+  color: #000;
+}
