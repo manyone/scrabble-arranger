@@ -1,5 +1,7 @@
 import React from 'react';
 import './ScrabbleTiles.css';
+import feltBackground from '../public/felt_background.jpg'; // Adjust the path as needed
+
 
 const ScrabbleTiles = ({ board }) => {
   const tilePoints = {
@@ -12,7 +14,7 @@ const ScrabbleTiles = ({ board }) => {
     <div
       className="scrabble-tiles"
       style={{
-        backgroundImage: `url(${process.env.PUBLIC_URL}/felt_background.jpg)`, // Use the felt background
+        backgroundImage: `url(${feltBackground}}`, // Use the felt background
         backgroundSize: 'cover', // Ensure the background covers the entire container
         padding: '20px', // Add padding for better appearance
         borderRadius: '10px', // Optional: Add rounded corners
