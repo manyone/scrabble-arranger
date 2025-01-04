@@ -1,11 +1,11 @@
 .scrabble-tiles {
-  background-image: url('/felt_background.jpg'); /* Use the correct path */
-  background-size: cover; /* Ensure the background covers the entire container */
-  background-position: center; /* Center the background image */
-  width: 100%; /* Ensure it takes the full width */
-  min-height: 100vh; /* Ensure it covers the full height */
-  padding: 20px; /* Add some padding */
-  box-sizing: border-box; /* Include padding in width/height calculations */
+  background-image: url('./assets/felt_background.jpg'); /* Updated path */
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  min-height: 100vh;
+  padding: 20px;
+  box-sizing: border-box;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -13,26 +13,26 @@
 
 .tile-row {
   display: flex;
-  flex-wrap: wrap; /* Allow tiles to wrap to the next line on small screens */
-  justify-content: center; /* Center tiles horizontally */
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .tile {
-  width: 50px; /* Adjust tile size as needed */
+  width: 50px;
   height: 50px;
   margin: 2px;
-  background-color: rgba(210, 180, 140, 0.8); /* Semi-transparent wooden color */
-  border: 2px solid #8b4513; /* Darker border */
+  background-color: rgba(210, 180, 140, 0.8);
+  border: 2px solid #8b4513;
   display: flex;
   justify-content: center;
   align-items: center;
   position: relative;
   border-radius: 5px;
-  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* Shadow for depth */
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
 }
 
 .tile-letter {
-  font-size: 24px; /* Adjust font size as needed */
+  font-size: 24px;
   font-weight: bold;
   color: #000;
 }
@@ -41,26 +41,25 @@
   position: absolute;
   bottom: 5px;
   right: 5px;
-  font-size: 12px; /* Adjust font size as needed */
+  font-size: 12px;
   color: #000;
 }
 
-/* Responsive styles for smaller screens */
 @media (max-width: 600px) {
   .tile {
-    width: 40px; /* Smaller tiles for mobile */
+    width: 40px;
     height: 40px;
   }
 
   .tile-letter {
-    font-size: 18px; /* Smaller font for mobile */
+    font-size: 18px;
   }
 
   .tile-points {
-    font-size: 10px; /* Smaller font for mobile */
+    font-size: 10px;
   }
 
   .scrabble-tiles {
-    padding: 10px; /* Reduce padding for small screens */
+    padding: 10px;
   }
 }

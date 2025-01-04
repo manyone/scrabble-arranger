@@ -1,7 +1,6 @@
 import React from 'react';
 import './ScrabbleTiles.css';
-import feltBackground from '../public/felt_background.jpg'; // Adjust the path as needed
-
+import feltBackground from './assets/felt_background.jpg'; // Updated import path
 
 const ScrabbleTiles = ({ board }) => {
   const tilePoints = {
@@ -14,23 +13,23 @@ const ScrabbleTiles = ({ board }) => {
     <div
       className="scrabble-tiles"
       style={{
-        backgroundImage: `url(${feltBackground}}`, // Use the felt background
-        backgroundSize: 'cover', // Ensure the background covers the entire container
-        padding: '20px', // Add padding for better appearance
-        borderRadius: '10px', // Optional: Add rounded corners
+        backgroundImage: `url(${feltBackground})`, // Updated background image path
+        backgroundSize: 'cover',
+        padding: '20px',
+        borderRadius: '10px',
       }}
     >
       {board.map((row, x) => (
         <div key={x} className="tile-row">
           {row.map((cell, y) => (
             <div key={y} className="tile-container">
-              {cell !== ' ' ? ( // Only render a tile if the cell is not empty
+              {cell !== ' ' ? (
                 <div className="tile">
                   <div className="tile-letter">{cell}</div>
                   <div className="tile-points">{tilePoints[cell] || 0}</div>
                 </div>
               ) : (
-                <div className="empty-cell"></div> // Render an empty cell
+                <div className="empty-cell"></div>
               )}
             </div>
           ))}
