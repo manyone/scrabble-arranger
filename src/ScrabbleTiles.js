@@ -1,6 +1,6 @@
 import React from 'react';
 import './ScrabbleTiles.css';
-import feltBackground from './assets/felt_background.jpg'; // Updated import path
+import feltBackground from './assets/felt_background.jpg'; // Ensure the path is correct
 
 const ScrabbleTiles = ({ board }) => {
   const tilePoints = {
@@ -13,7 +13,7 @@ const ScrabbleTiles = ({ board }) => {
     <div
       className="scrabble-tiles"
       style={{
-        backgroundImage: `url(${feltBackground})`, // Updated background image path
+        backgroundImage: `url(${feltBackground})`, // Ensure the background image is applied
         backgroundSize: 'cover',
         padding: '20px',
         borderRadius: '10px',
@@ -22,14 +22,12 @@ const ScrabbleTiles = ({ board }) => {
       {board.map((row, x) => (
         <div key={x} className="tile-row">
           {row.map((cell, y) => (
-            <div key={y} className="tile-container">
-              {cell !== ' ' ? (
-                <div className="tile">
+            <div key={y} className={cell !== ' ' ? 'tile' : 'empty-cell'}>
+              {cell !== ' ' && (
+                <>
                   <div className="tile-letter">{cell}</div>
                   <div className="tile-points">{tilePoints[cell] || 0}</div>
-                </div>
-              ) : (
-                <div className="empty-cell"></div>
+                </>
               )}
             </div>
           ))}
